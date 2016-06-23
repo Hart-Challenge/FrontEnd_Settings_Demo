@@ -1,0 +1,79 @@
+<div class="page-container" layout="column" flex="99" layout-fill layout-align="center center">
+  <div class="settings-container" layout="column" layout-align="start start" flex="80">
+
+    <div class="tabs" layout="row" layout-align="start start">
+      <a class="tab tab-selected" href>Profile</a>
+      <a class="tab" href>Notifications</a>
+      <a class="tab" href>Social</a>
+      <a class="tab" href>Billing</a>
+    </div>
+
+    <div class="settings-body" flex="99" layout="column" layout-padding layout-align="center space-between">
+
+      <div flex="99" class="settings-config" layout="row" layout-align="space-between space-between">
+        <div flex="30" id="settings-left">
+          <h2>Photo</h2>
+          <div class="margin-children" layout="column" layout-align="start center">
+            <div class="settings-image-box"></div>
+            <select>
+              <option>Add photo from...</option>
+            </select>
+            <a href>Delete or remove photo</a>
+          </div>
+        </div>
+        <div flex="70" id="settings-right" layout="column" layout-align="start space-between">
+          <div id="settings-profile">
+            <h2>Profile</h2>
+            <div layout="column" layout-align="start center">
+
+              <div class="input-container" flex="99" layout="row" layout-align=" start">
+                 <span flex="25" class="hart-label">Name</span>
+                 <input flex="75" class="hart-input">
+              </div>
+
+              <div class="input-container" flex="99" layout="row" layout-align="start start">
+                 <span flex="25" class="hart-label">Email Address</span>
+                 <input flex="75" class="hart-input">
+              </div>
+
+              <div class="input-container" flex="99" layout="row" layout-align="space-between space-between">
+                 <span flex="25" class="hart-label">Password</span>
+                 <div flex="75" style="test-align:center; width: 100%;"><a href>Change my Password</a></div>
+              </div>
+
+            </div>
+          </div>
+          <div id="settings-social">
+            <h2>Social Media</h2>
+            <div layout="column" layout-align="start center">
+
+              <div class="input-container" flex="99" layout="row" layout-align="start start">
+                 <span flex="25" class="hart-label">Facebook</span>
+                 <input flex="75" class="hart-input" id="facebook-input">
+              </div>
+
+              <div class="input-container" flex="99" layout="row" layout-align="start start">
+                 <span flex="25" class="hart-label">Twitter</span>
+                 <input flex="75" class="hart-input" id="twitter-input">
+              </div>
+
+              <div class="input-container" flex="99" layout="row" layout-align="start start">
+                 <span flex="25" class="hart-label">Google</span>
+                 <input flex="75" class="hart-input" id="google-input">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div flex="99" class="settings-actions" layout="row" layout-align="end end">
+        <a href class="button-square">Cancel</a>
+        <a href class="button-square">Save</a>
+      </div>
+    </div>
+
+
+  </div>
+</div>

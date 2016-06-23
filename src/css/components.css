@@ -1,0 +1,112 @@
+a {
+  color: #3264e4;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 20px;
+  color: #252525;
+}
+
+select {
+  background-color: white;
+  color: #3264e4;
+  padding: 5px 20px 5px 20px;
+  border-radius: 5px;
+}
+
+.input-container {
+  margin: 6px 0px 6px 0px;
+  width: 100%;
+}
+
+.hart-input {
+  height: 26px;
+  width: 100%;
+  border-style: solid;
+  border-width: thin;
+  border-color: grey;
+  border-radius: 5px;
+  outline: none
+}
+
+.hart-input:focus {
+  border-color: #7393e4;
+}
+
+.hart-label {
+  text-align: right;
+  margin-right: 1em;
+  font-size: 12px;
+  width: 80px;
+}
+
+.button-square {
+  text-decoration: none;
+  font-weight: 300;
+  border-radius: 7px;
+  color: white;
+  margin: 10px;
+  padding: 10px 40px 10px 40px;
+  background-color: #3264e4;
+}
+
+.button-square:focus {
+  -webkit-animation-name: button-focus; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+  animation-name: button-focus;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes button-focus {
+    50% {
+      color: #3264e4;
+      background-color: white;
+      border-style: solid;
+      border-width: thin;
+      border-color: grey;
+    }
+    100% {
+      color: white;
+      background-color: #3264e4;
+      border-style: none;
+    }
+}
+
+/* Standard syntax */
+@keyframes button-focus {
+  50% {
+    color: #3264e4;
+    background-color: white;
+    border-color: grey;
+  }
+  100% {
+    color: white;
+    background-color: #3264e4;
+  }
+}
+
+.tabs {
+  padding-left: 10px;
+}
+
+.tab.tab-selected {
+  color: white;
+  background-color: #3264e4;
+}
+
+.tab {
+  font-size: 14px;
+  color: grey;
+  background-color: white;
+  text-decoration: none;
+  min-height: 20px;
+  min-width: 7em;
+  padding: 0.75em;
+  margin-bottom: -10px;
+  border-width: thin;
+  border-style: solid;
+  border-color: #d5d5d5;
+  border-radius: 7px;
+  text-align: center;
+}
