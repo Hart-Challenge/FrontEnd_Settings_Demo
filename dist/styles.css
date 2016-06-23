@@ -158,6 +158,7 @@ md-sidenav {
 .settings-container {
   margin: 2em;
   width: 70%;
+  max-width: 1000px;
 }
 
 .settings-container > div {
@@ -222,6 +223,10 @@ md-sidenav {
   }
 }
 @media (max-width: 590px) {
+  .settings-section {
+    width: 100%;
+  }
+
   .settings-container {
     width: 95%;
   }

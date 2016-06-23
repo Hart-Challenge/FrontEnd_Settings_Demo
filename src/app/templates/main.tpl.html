@@ -28,13 +28,13 @@
 
         <div class="settings-body" layout="column" layout-padding layout-align="center center">
 
-          <div  class="settings-config" layout="row"  layout-align="space-between space-between" layout-wrap>
+          <div class="settings-config" layout="row"  layout-align="space-around space-between" layout-wrap>
             
-            <div class="settings-section" flex-gt-sm="30" id="settings-left">
+            <div class="settings-section"  id="settings-left">
               <h2>Photo</h2>
               <div class="margin-children" layout="column" layout-align="space-between center">
                 
-                <div flex layout="row" layout-align="center center" class="settings-image-box">
+                <div layout="row" layout-align="center center" class="settings-image-box">
                   <img ng-if="imageSrc" flex ng-src="{{imageSrc}}">
                   <ht-button ng-if="!imageSrc" ng-click="pic.select();">Add Image</ht-button>
                 </div>
@@ -49,12 +49,11 @@
               </div>
             </div>
             
-            <div class="settings-section"  flex-gt-sm="70" id="settings-right" layout="column" layout-align="start space-between">
-              
+            <div class="settings-section" id="settings-right" layout="column" layout-align="start space-between">
               
               <div id="settings-profile">
                 <h2>Profile</h2>
-                <div layout="column" layout-align="start center">
+                <div layout="column" style="min-width: 260px;" layout-align="start center">
 
                   <div class="input-container"  layout="row" layout-align=" center">
                     <span flex="25" class="hart-label">Name</span>
@@ -118,7 +117,9 @@
 
                 </div>
               </div>
+              
             </div>
+            
           </div>
 
 

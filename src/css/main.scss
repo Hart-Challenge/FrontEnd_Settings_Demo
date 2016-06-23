@@ -18,7 +18,9 @@ md-sidenav{
 .settings-container {
   margin: 2em;
   width: 70%;
+  max-width: 1000px;
 }
+
 
 .settings-container > div {
   width: 100%;
@@ -33,9 +35,10 @@ md-sidenav{
 }
 
 .settings-config {
-  
   width: 100%;
 }
+
+
 
 .settings-image-box {
   height: 170px;
