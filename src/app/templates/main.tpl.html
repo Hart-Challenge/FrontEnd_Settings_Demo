@@ -1,5 +1,5 @@
 
-<div class="page-container" layout="row" flex="99" layout-align="center center">
+<md-content class="page-container" layout="row"  layout-align="center center">
   
   <md-sidenav md-component-id="left" md-is-open="isSidenavOpen" class="md-sidenav-left md-whiteframe-z1">
             <md-content>
@@ -14,9 +14,9 @@
   </md-sidenav>
 
 
-    <div flex="99" class="settings-container" layout="column" layout-align="center center" >
+    <div  class="settings-container" layout="column" layout-align="center center" >
         
-        <div flex="99" class="tabs" layout="row" layout-align="start start" layout-wrap>
+        <div  class="tabs" layout="row" layout-align="start start" layout-wrap>
           
           <a class="tab tab-selected" href ng-hide="media.mobile()">Profile</a>
           <a class="tab" href ng-hide="media.mobile()">Notifications</a>
@@ -28,9 +28,9 @@
 
         <div class="settings-body" layout="column" layout-padding layout-align="center center">
 
-          <div flex="99" class="settings-config" layout="row"  layout-align="space-between space-between" layout-wrap>
+          <div  class="settings-config" layout="row"  layout-align="space-between space-between" layout-wrap>
             
-            <div flex="99" flex-gt-sm="30" id="settings-left">
+            <div class="settings-section" flex-gt-sm="30" id="settings-left">
               <h2>Photo</h2>
               <div class="margin-children" layout="column" layout-align="space-between center">
                 
@@ -49,46 +49,46 @@
               </div>
             </div>
             
-            <div flex="99" flex-gt-sm="70" id="settings-right" layout="column" layout-align="start space-between">
+            <div class="settings-section"  flex-gt-sm="70" id="settings-right" layout="column" layout-align="start space-between">
               
               
               <div id="settings-profile">
                 <h2>Profile</h2>
                 <div layout="column" layout-align="start center">
 
-                  <div class="input-container" flex="99" layout="row" layout-align=" center">
+                  <div class="input-container"  layout="row" layout-align=" center">
                     <span flex="25" class="hart-label">Name</span>
                     <input flex="75" class="hart-input">
                   </div>
 
-                  <div class="input-container" flex="99" layout="row" layout-align="start center">
+                  <div class="input-container"  layout="row" layout-align="start center">
                     <span flex="25" class="hart-label">Email Address</span>
                     <input flex="75" class="hart-input">
                   </div>
 
-                  <div class="input-container" flex="99" layout="row" layout-align="space-between center">
+                  <div class="input-container"  layout="row" layout-align="space-between center">
                     <span flex="25" class="hart-label">Password</span>
                     <div flex="75" style="test-align:center; width: 100%;">
                       <ht-button class="ht-button-thin ht-button-nopadding" ng-click="password.toggleChange()">{{password.buttonText}}</ht-button>
                     </div>
                   </div>
                   
-                  <div ng-show="password.change" class="input-container" flex="99" layout="row" layout-align="start center">
+                  <div ng-show="password.change" class="input-container"  layout="row" layout-align="start center">
                     <span flex="25" class="hart-label">Current Password</span>
                     <input flex="75" class="hart-input">
                   </div>
                   
-                  <div ng-show="password.change" class="input-container" flex="99" layout="row" layout-align="start center">
+                  <div ng-show="password.change" class="input-container"  layout="row" layout-align="start center">
                     <span flex="25" class="hart-label">New Password</span>
                     <input flex="75" class="hart-input">
                   </div>
                   
-                  <div ng-show="password.change" class="input-container" flex="99" layout="row" layout-align="start center">
+                  <div ng-show="password.change" class="input-container"  layout="row" layout-align="start center">
                     <span flex="25" class="hart-label">Confirm New Password</span>
                     <input flex="75" class="hart-input">
                   </div>
                   
-                  <div ng-show="password.change" class="input-container" flex="99" layout="row" layout-align="start center">
+                  <div ng-show="password.change" class="input-container"  layout="row" layout-align="start center">
                     <span flex="25" class="hart-label"></span>
                     <span flex="75" ng-show="password.change" class="primary-color-text" style="font-size: 12px;">Click 'Save' to update changes.</span>
                   </div>
@@ -97,21 +97,21 @@
                 </div>
               </div>
               
-              <div  id="settings-social">
+              <div id="settings-social" >
                 <h2>Social Media</h2>
                 <div layout="column" layout-align="start center">
 
-                  <div class="input-container" flex="99" layout="row" layout-align="start start">
+                  <div class="input-container"  layout="row" layout-align="start start">
                     <span flex="25" class="hart-label">Facebook</span>
                     <input flex="75" class="hart-input" id="facebook-input">
                   </div>
 
-                  <div class="input-container" flex="99" layout="row" layout-align="start start">
+                  <div class="input-container"  layout="row" layout-align="start start">
                     <span flex="25" class="hart-label">Twitter</span>
                     <input flex="75" class="hart-input" id="twitter-input">
                   </div>
 
-                  <div class="input-container" flex="99" layout="row" layout-align="start start">
+                  <div class="input-container" layout="row" layout-align="start start">
                     <span flex="25" class="hart-label">Google</span>
                     <input flex="75" class="hart-input" id="google-input">
                   </div>
@@ -122,7 +122,7 @@
           </div>
 
 
-          <div flex="99" class="settings-actions" layout="row" layout-align="end end">
+          <div class="settings-actions" layout="row" layout-align="end end">
             <ht-button>Cancel</ht-button>
             <ht-button>Save</ht-button>
           </div>
@@ -133,4 +133,4 @@
     
     
     
-</div>
+</md-content>

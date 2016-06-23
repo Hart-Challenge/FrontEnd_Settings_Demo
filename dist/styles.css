@@ -143,7 +143,6 @@ html {
 }
 
 body {
-  width: 100%;
   font-weight: 400;
   color: #707070;
 }
@@ -159,11 +158,10 @@ md-sidenav {
 .settings-container {
   margin: 2em;
   width: 70%;
-  height: 500px;
 }
 
 .settings-container > div {
-  min-width: 900px;
+  width: 100%;
 }
 
 .settings-body {
@@ -172,12 +170,9 @@ md-sidenav {
   border-style: solid;
   border-color: #d5d5d5;
   border-radius: 4px;
-  height: 100%;
-  overflow: auto;
 }
 
 .settings-config {
-  height: 100%;
   width: 100%;
 }
 
@@ -192,7 +187,6 @@ md-sidenav {
 }
 
 .settings-image-box img {
-  height: 100%;
   width: 100%;
 }
 
@@ -200,6 +194,7 @@ md-sidenav {
   margin-top: 1em;
   margin-bottom: 0px;
   min-height: 30px;
+  width: 100%;
 }
 
 #facebook-input {
@@ -237,6 +232,10 @@ md-sidenav {
 
   .tabs {
     padding-right: 10px;
+  }
+
+  .settings-container {
+    height: 900px;
   }
 }
 
