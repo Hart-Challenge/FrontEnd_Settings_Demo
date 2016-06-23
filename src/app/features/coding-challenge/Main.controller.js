@@ -1,4 +1,4 @@
-function MainController($scope, fileReader, $mdMedia, $mdSidenav){
+function MainController($scope, fileReader, $mdMedia, $mdSidenav, $timeout){
 	var ctrl = this;
 	
 	
@@ -17,7 +17,15 @@ function MainController($scope, fileReader, $mdMedia, $mdSidenav){
 		},
 		remove: function() {
 			delete $scope.imageSrc;
+		},
+		message: '',
+		showMessage: function(){
+			this.message = "Wow! You look absolutely wonderful.";
+			$timeout(function(){
+				$scope.pic.message = '';
+			}, 3400)
 		}
+		
 	}
 	  
 	$scope.getFile = function () {
@@ -26,6 +34,7 @@ function MainController($scope, fileReader, $mdMedia, $mdSidenav){
 			.then(function(result) {
 				$scope.imageSrc = result;
 				$scope.pic.showSelector = false;
+				$scope.pic.showMessage();
 			});
 	};
 	
@@ -39,9 +48,20 @@ function MainController($scope, fileReader, $mdMedia, $mdSidenav){
 		}
 	};
 	
+	$scope.password = {
+		buttonText: 'Change my Password',
+		change: false,
+		toggleChange: function() {
+			if(this.change){
+				this.buttonText = 'Change my Password';
+			} else { this.buttonText = 'Nevermind, don\'t change my password'; }
+			this.change = !this.change;
+		}
+	};
+	
 
 }
 
 angular
 	.module('app')
-	.controller('MainController', ['$scope', 'fileReader', '$mdMedia', '$mdSidenav', MainController]);
+	.controller('MainController', ['$scope', 'fileReader', '$mdMedia', '$mdSidenav', '$timeout', MainController]);

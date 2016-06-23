@@ -5,3 +5,10 @@ $primary-color-gentle: lighten($primary-color, 20%);
 $border-color: grey;
 
 $border-color-gentle: #d5d5d5;
+
+
+
+
+.primary-color-text {
+    color: $primary-color;
+}
