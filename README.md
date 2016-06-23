@@ -21,12 +21,14 @@ Only shows if 'Change my Password' is clicked.
 Mobile users are people too, so I decided to create something special, just for them!
 
 I call it, THE OMNITAB ®.
+
 ![alt tag](http://johnanthony-dev.com/hart-demo/screens/s2.png)
+
 ## The OMNITAB® in action.
 
-Because mobile users are people too.
+![alt tag](http://johnanthony-dev.com/hart-demo/screens/s3.png)
 
-# Tested on Chromium 48, Safari 9.1.1, and IE11.
+## Tested on Chromium 48, Safari 9.1.1, and IE11.
 
 I hope you enjoyed reading this, feel free to [try it out for yourself.](http://johnanthony-dev.com/hart-demo)
 
