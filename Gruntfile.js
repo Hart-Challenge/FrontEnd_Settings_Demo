@@ -22,7 +22,8 @@ module.exports = function(grunt) {
         src: [
           "src/css/colors.scss",
           "src/css/components.scss",
-          "src/css/main.scss"
+          "src/css/main.scss",
+          "src/css/queries.scss"
       ],
         dest: "build/project.scss"
       },

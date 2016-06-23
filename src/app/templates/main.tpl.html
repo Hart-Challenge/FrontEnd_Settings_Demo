@@ -1,83 +1,102 @@
-<div class="page-container" layout="column" flex="99" layout-fill layout-align="center center">
-  <div class="settings-container" layout="column" layout-align="start start" flex="80">
 
-    <div class="tabs" layout="row" layout-align="start start">
-      <a class="tab tab-selected" href>Profile</a>
-      <a class="tab" href>Notifications</a>
-      <a class="tab" href>Social</a>
-      <a class="tab" href>Billing</a>
-    </div>
+<div class="page-container" layout="row" flex="99" layout-align="center center">
+  
+  <md-sidenav md-component-id="left" md-is-open="isSidenavOpen" class="md-sidenav-left md-whiteframe-z1">
+            Left Nav!
+  </md-sidenav>
 
-    <div class="settings-body" flex="99" layout="column" layout-padding layout-align="center space-between">
 
-      <div flex="99" class="settings-config" layout="row" layout-align="space-between space-between">
-        <div flex="30" id="settings-left">
-          <h2>Photo</h2>
-          <div class="margin-children" layout="column" layout-align="start center">
-            <div flex class="settings-image-box"><img ng-if="imageSrc" flex ng-src="{{imageSrc}}"></div>
-            <a href ng-show="imageSrc" style="font-size: 12px;">Delete or remove photo</a>
-            <a href class="button-square">Add Image</a>
-            
-            
-            <form ng-show="false">
-              <input type="file" ng-file-select="onFileSelect($files)" >
-            </form>
-            
-          </div>
-        </div>
-        <div flex="70" id="settings-right" layout="column" layout-align="start space-between">
-          <div id="settings-profile">
-            <h2>Profile</h2>
-            <div layout="column" layout-align="start center">
+  <div flex="99" class="settings-container" layout="column" layout-align="center center" >
+      
+      <div flex="99" class="tabs" layout="row" layout-align="start start" layout-wrap>
+        
+        <a class="tab tab-selected" href ng-hide="media.mobile()">Profile</a>
+        <a class="tab" href ng-hide="media.mobile()">Notifications</a>
+        <a class="tab" href ng-hide="media.mobile()">Social</a>
+        <a class="tab" href ng-hide="media.mobile()">Billing</a>
+        
+        <a class="tab tab-selected" href ng-show="media.mobile()" ng-click="sideNav.toggle()"><img src="img/menu.png"></a>
+      </div>
 
-              <div class="input-container" flex="99" layout="row" layout-align=" center">
-                 <span flex="25" class="hart-label">Name</span>
-                 <input flex="75" class="hart-input">
+      <div class="settings-body" layout="column" layout-padding layout-align="center center">
+
+        <div flex="99" class="settings-config" layout="row" layout-fill layout-align="space-between space-between" layout-wrap>
+          
+          <div flex="99" flex-gt-sm="30" id="settings-left">
+            <h2>Photo</h2>
+            <div class="margin-children" layout="column" layout-align="space-between center">
+              
+              <div flex layout="row" layout-align="center center" class="settings-image-box">
+                <img ng-if="imageSrc" flex ng-src="{{imageSrc}}">
+                <ht-button ng-if="!imageSrc" ng-click="pic.select();">Add Image</ht-button>
               </div>
-
-              <div class="input-container" flex="99" layout="row" layout-align="start center">
-                 <span flex="25" class="hart-label">Email Address</span>
-                 <input flex="75" class="hart-input">
-              </div>
-
-              <div class="input-container" flex="99" layout="row" layout-align="space-between center">
-                 <span flex="25" class="hart-label">Password</span>
-                 <div flex="75" style="test-align:center; width: 100%;"><ht-button class="ht-button-thin">Change my Password</ht-button></div>
+              <a href ng-if="imageSrc" ng-click="pic.remove()" style="font-size: 12px;">Delete or remove photo</a>
+              
+              <div ng-show="pic.showSelector">
+                <form>
+                  <input type="file" ng-file-select="onFileSelect($files)" >
+                </form>
               </div>
 
             </div>
           </div>
-          <div id="settings-social">
-            <h2>Social Media</h2>
-            <div layout="column" layout-align="start center">
+          
+          <div flex="99" flex-gt-sm="70" id="settings-right" layout="column" layout-align="start space-between">
+            
+            
+            <div id="settings-profile">
+              <h2>Profile</h2>
+              <div layout="column" layout-align="start center">
 
-              <div class="input-container" flex="99" layout="row" layout-align="start start">
-                 <span flex="25" class="hart-label">Facebook</span>
-                 <input flex="75" class="hart-input" id="facebook-input">
+                <div class="input-container" flex="99" layout="row" layout-align=" center">
+                  <span flex="25" class="hart-label">Name</span>
+                  <input flex="75" class="hart-input">
+                </div>
+
+                <div class="input-container" flex="99" layout="row" layout-align="start center">
+                  <span flex="25" class="hart-label">Email Address</span>
+                  <input flex="75" class="hart-input">
+                </div>
+
+                <div class="input-container" flex="99" layout="row" layout-align="space-between center">
+                  <span flex="25" class="hart-label">Password</span>
+                  <div flex="75" style="test-align:center; width: 100%;"><ht-button class="ht-button-thin">Change my Password</ht-button></div>
+                </div>
+
               </div>
+            </div>
+            
+            <div  id="settings-social">
+              <h2>Social Media</h2>
+              <div layout="column" layout-align="start center">
 
-              <div class="input-container" flex="99" layout="row" layout-align="start start">
-                 <span flex="25" class="hart-label">Twitter</span>
-                 <input flex="75" class="hart-input" id="twitter-input">
+                <div class="input-container" flex="99" layout="row" layout-align="start start">
+                  <span flex="25" class="hart-label">Facebook</span>
+                  <input flex="75" class="hart-input" id="facebook-input">
+                </div>
+
+                <div class="input-container" flex="99" layout="row" layout-align="start start">
+                  <span flex="25" class="hart-label">Twitter</span>
+                  <input flex="75" class="hart-input" id="twitter-input">
+                </div>
+
+                <div class="input-container" flex="99" layout="row" layout-align="start start">
+                  <span flex="25" class="hart-label">Google</span>
+                  <input flex="75" class="hart-input" id="google-input">
+                </div>
+
               </div>
-
-              <div class="input-container" flex="99" layout="row" layout-align="start start">
-                 <span flex="25" class="hart-label">Google</span>
-                 <input flex="75" class="hart-input" id="google-input">
-              </div>
-
             </div>
           </div>
         </div>
+
+
+        <div flex="99" class="settings-actions" layout="row" layout-align="end end">
+          <ht-button>Cancel</ht-button>
+          <ht-button>Save</ht-button>
+        </div>
       </div>
-
-
-      <div flex="99" class="settings-actions" layout="row" layout-align="end end">
-        <ht-button>Cancel</ht-button>
-        <ht-button>Save</ht-button>
-      </div>
-    </div>
-
+      
 
   </div>
 </div>

@@ -1,0 +1,20 @@
+@media (max-width: 820px) {
+  .settings-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 590px) {
+  .settings-container {
+    width: 95%;
+  }
+  
+  .tab {
+    width: 100%;
+  }
+  
+  .tabs {
+    padding-right: 10px;
+  }
+}
+
