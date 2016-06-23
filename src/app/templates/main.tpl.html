@@ -14,11 +14,15 @@
         <div flex="30" id="settings-left">
           <h2>Photo</h2>
           <div class="margin-children" layout="column" layout-align="start center">
-            <div class="settings-image-box"></div>
-            <select>
-              <option>Add photo from...</option>
-            </select>
-            <a href>Delete or remove photo</a>
+            <div flex class="settings-image-box"><img ng-if="imageSrc" flex ng-src="{{imageSrc}}"></div>
+            <a href ng-show="imageSrc" style="font-size: 12px;">Delete or remove photo</a>
+            <a href class="button-square">Add Image</a>
+            
+            
+            <form ng-show="false">
+              <input type="file" ng-file-select="onFileSelect($files)" >
+            </form>
+            
           </div>
         </div>
         <div flex="70" id="settings-right" layout="column" layout-align="start space-between">

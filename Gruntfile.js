@@ -17,18 +17,34 @@ module.exports = function(grunt) {
 
 
     concat_css: {
-      options: {
-        // Task-specific options go here.
+      options: {},
+      project: {
+        src: [
+          "src/css/colors.scss",
+          "src/css/components.scss",
+          "src/css/main.scss"
+      ],
+        dest: "build/project.scss"
       },
-      all: {
+      addVendor: {
         src: [
           "vendor/angular-material/angular-material.min.css",
-          "src/css/*.css"
+          "build/project.css",
       ],
         dest: "dist/styles.css"
       },
     },
 
+    sass: {                              // Task
+      dist: {                            // Target
+        options: {                       // Target options
+          style: 'expanded'
+        },
+        files: {                         
+          'build/project.css': 'build/project.scss'
+        }
+      }
+    },
 
     concat: {
       options: {
@@ -58,7 +74,6 @@ module.exports = function(grunt) {
         dest: 'dist/app.min.js'
       }
     },
-
 
     uglify: {
         options: {
@@ -101,9 +116,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-concat-css');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
 
   //grunt.registerTask('default', ['concat_css', 'concat:vendor', 'ngtemplates', 'concat:app_src', 'uglify', 'concat:bundle' ]); // Production
-  grunt.registerTask('default', ['concat_css', 'concat:vendor', 'ngtemplates', 'concat:app_src', 'concat:bundle_dev' ]); // Development
+  grunt.registerTask('default', ['concat_css:project', 'sass', 'concat_css:addVendor', 'concat:vendor', 'ngtemplates', 'concat:app_src', 'concat:bundle_dev' ]); // Development
 
 };

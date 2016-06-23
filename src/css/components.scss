@@ -1,0 +1,112 @@
+a {
+  color: $primary-color;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 20px;
+  color: #252525;
+}
+
+select {
+  background-color: white;
+  color: $primary-color;
+  padding: 5px 20px 5px 20px;
+  border-radius: 5px;
+}
+
+.input-container {
+  margin: 6px 0px 6px 0px;
+  width: 100%;
+}
+
+.hart-input {
+  height: 26px;
+  width: 100%;
+  border-style: solid;
+  border-width: thin;
+  border-color: $border-color;
+  border-radius: 5px;
+  outline: none
+}
+
+.hart-input:focus {
+  border-color: $primary-color-gentle;
+}
+
+.hart-label {
+  text-align: right;
+  margin-right: 1em;
+  font-size: 12px;
+  width: 80px;
+}
+
+.button-square {
+  text-decoration: none;
+  font-weight: 300;
+  border-radius: 7px;
+  color: white;
+  margin: 10px;
+  padding: 10px 40px 10px 40px;
+  background-color: $primary-color;
+}
+
+.button-square:focus {
+  -webkit-animation-name: button-focus; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+  animation-name: button-focus;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes button-focus {
+    50% {
+      color: #3264e4;
+      background-color: white;
+      border-style: solid;
+      border-width: thin;
+      border-color: $border-color;
+    }
+    100% {
+      color: white;
+      background-color: $primary-color;
+      border-style: none;
+    }
+}
+
+/* Standard syntax */
+@keyframes button-focus {
+  50% {
+    color: $primary-color;
+    background-color: white;
+    border-color: $border-color;
+  }
+  100% {
+    color: white;
+    background-color: $primary-color;
+  }
+}
+
+.tabs {
+  padding-left: 10px;
+}
+
+.tab.tab-selected {
+  color: white;
+  background-color: $primary-color
+}
+
+.tab {
+  font-size: 14px;
+  color: $border-color;
+  background-color: white;
+  text-decoration: none;
+  min-height: 20px;
+  min-width: 7em;
+  padding: 0.75em;
+  margin-bottom: -10px;
+  border-width: thin;
+  border-style: solid;
+  border-color: $border-color-gentle;
+  border-radius: 7px;
+  text-align: center;
+}
